@@ -11,6 +11,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material';
 import { MatCheckboxModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { AppComponent } from './app.component';
 import 'hammerjs';
@@ -38,6 +41,7 @@ import {MatDialogModule} from '@angular/material';
     DishDetailComponent,
     HeaderComponent,
     FooterComponent,
+    
     AboutComponent,
     HomeComponent,
     ContactComponent,
@@ -52,9 +56,12 @@ import {MatDialogModule} from '@angular/material';
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSelectModule,
+    MatSlideToggleModule,
     MatDialogModule,
     FlexLayoutModule,
     FormsModule,
+    ReactiveFormsModule,
     MatDialogModule,
     MatCheckboxModule,
     AppRoutingModule,
