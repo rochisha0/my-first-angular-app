@@ -32,7 +32,7 @@ import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
 import { LoginComponent } from './login/login.component';
 import {MatDialogModule} from '@angular/material';
-
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -60,6 +60,7 @@ import {MatDialogModule} from '@angular/material';
     MatSlideToggleModule,
     MatDialogModule,
     FlexLayoutModule,
+    MatProgressSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,

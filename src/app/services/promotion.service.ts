@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Promotion } from '../shared/promotion';
 import { PROMOTIONS } from '../shared/promotions';
 import { BrowserPlatformLocation } from '@angular/platform-browser/src/browser/location/browser_platform_location';
-
+import { Observable, of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +11,15 @@ import { BrowserPlatformLocation } from '@angular/platform-browser/src/browser/l
 export class PromotionService {
 
   constructor() { }
-  getPromotions():Promotion[]{
-    return PROMOTIONS;
+  getPromotions(): Observable<Promotion[]> {
+    return of(PROMOTIONS).pipe(delay(2000));
   }
-  getPromotion(id: string): Promotion {
-    return PROMOTIONS.filter((promo) => { promo.id == id })[0];
+
+  getPromotion(id: string): Observable<Promotion> {
+    return of(PROMOTIONS.filter((promotion) => (promotion.id === id))[0]).pipe(delay(2000));
   }
-  getFeaturedPromotion(): Promotion {
-      return PROMOTIONS.filter((promo) => promo.featured)[0];
+
+  getFeaturedPromotion(): Observable<Promotion> {
+    return of(PROMOTIONS.filter((promotion) => promotion.featured)[0]).pipe(delay(2000));
   }
 }
