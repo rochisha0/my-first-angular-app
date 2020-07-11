@@ -26,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { MatSliderModule } from '@angular/material/slider';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { PromotionService } from './services/promotion.service';
@@ -56,6 +57,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSliderModule,
     MatSelectModule,
     MatSlideToggleModule,
     MatDialogModule,
